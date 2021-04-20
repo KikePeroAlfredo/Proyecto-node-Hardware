@@ -1,0 +1,16 @@
+<%- include('../includes/encabezado.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navegacion.ejs') %>
+        <main class="centrado">
+            <h1><%= producto.titulo %></h1>
+            <hr>
+            <div class="image">
+                <img src="<%= producto.urlImagen %>" alt="<%= producto.titulo %>">
+            </div>
+            <h2><%= producto.precio %></h2>
+            <p><%= producto.descripcion %> </p>
+            <%- include ('../includes/agregar-al-carrito.ejs') %>
+        </main>
+        <%- include('../includes/pie.ejs') %>

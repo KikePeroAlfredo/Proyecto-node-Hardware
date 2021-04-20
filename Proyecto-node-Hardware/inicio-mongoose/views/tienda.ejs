@@ -1,0 +1,35 @@
+<%- include('includes/encabezado.ejs') %>
+</head>
+<body>
+   <%- include('includes/navegacion.ejs') %>
+   <main>
+      <h1>Mis Productos</h1>
+      <p>Lista de todos los productos...</p>
+      <% if(prods.length > 0) { %>
+        <div class="grid">
+            <% for(let producto of prods) { %>
+                <article class="card producto-item">
+                    <header class="card__header">
+                        <h1 class="producto_titulo">
+                            <%= producto.titulo %>
+                        </h1>
+                    </header>
+                    <div class="card__image">
+                        <img src="https://cdn.gandhi.com.mx/media/catalog/product/cache/1/image/370x/9df78eab33525d08d6e5fb8d27136e95/i/m/image_1165_1_94362.jpg" alt="Un Libro">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="producto_precio">$190.00</h2>
+                        <p class="producto__descripcion">Un excelente libro para principiantes!</p>
+                    </div>
+                    <div class="card_actions">
+                        <button class="btn"> Agregar al Carrito</button>
+                    </div>
+                </article>
+            <% } %>
+        </div>
+      <% } else { %>
+        <h1>No hay productos que mostrar!</h1>
+      <% } %>
+   </main>
+    
+<%- include('includes/pie.ejs') %>

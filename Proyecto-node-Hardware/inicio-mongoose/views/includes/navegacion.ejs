@@ -1,0 +1,51 @@
+<header class="main-header">
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list">
+            <li class="main-header__item">
+                <a class="<%= ruta === '/' ? 'active' : ''%>" href="/">Tienda</a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= ruta === '/productos' ? 'active' : ''%>" href="/productos">Productos</a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= ruta === '/carrito' ? 'active' : ''%>" href="/carrito">Carrito</a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= ruta === '/ordenes' ? 'active' : ''%>" href="/ordenes">Ordenes</a>
+            </li>
+            <li class="main-header__item">
+                <a class="<%= ruta === '/admin/agregar-producto' ? 'active' : ''%>" 
+                    href="/admin/agregar-producto">Agregar Producto</a>
+            </li>      
+            <li class="main-header__item">
+                <a class="<%= ruta === '/admin/productos' ? 'active' : ''%>" 
+                    href="/admin/productos">Administrar Productos</a>
+            </li>          
+        </ul>
+    </nav>
+</header>
+
+<nav class="mobile-nav">
+    <ul class="mobile-nav__item-list">
+            <li class="mobile-nav__item">
+                <a class="<%= ruta === '/' ? 'active' : '' %>" href="/">Shop</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= ruta === '/productos' ? 'active' : '' %>" href="/productos">Productos</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= ruta === '/cart' ? 'active' : '' %>" href="/carrito">Carrito</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= ruta === '/ordenes' ? 'active' : '' %>" href="/ordenes">Ordenes</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= ruta === '/admin/agregar-producto' ? 'active' : '' %>" href="/admin/agregar-producto">Agregar Producto
+                </a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="<%= ruta === '/admin/productos' ? 'active' : '' %>" href="/admin/productos">Administrar Productos
+                </a>
+            </li>
+        </ul>
+</nav>

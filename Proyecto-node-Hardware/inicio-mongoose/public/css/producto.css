@@ -1,0 +1,31 @@
+.forma-producto {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+
+}
+
+.producto-item {
+    width: 20rem;
+    max-width: 95%;
+    margin: 1rem;
+    background-color: #630000;
+    box-shadow: 10px 10px #0f0d0d;
+}
+
+.producto__titulo {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #29bb89;
+}
+
+.producto_precio {
+    text-align: center;
+    color: #29bb89;
+    margin-bottom: 0.5rem;
+}
+
+.producto__descripcion {
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+<%- include('../includes/encabezado.ejs') %>
+ <link rel="stylesheet" href="/css/producto.css">
+</head>
+<body>
+   <%- include('../includes/navegacion.ejs') %>
+   <main>
+
+      <% if(prods.length > 0) { %>
+        <div class="grid">
+            <% for(let producto of prods) { %>
+                <article class="card producto-item">
+                    <header class="card__header">
+                        <h1 class="producto_titulo">
+                            <%= producto.titulo %>
+                        </h1>
+                    </header>
+                    <div class="card__image">
+                        <img src="<%= producto.urlImagen %>" alt="<%= producto.titulo %>">
+                    </div>
+                    <div class="card__content">
+                        <h2 class="producto_precio"><%= producto.precio %></h2>
+                        <p class="producto__descripcion"><%= producto.descripcion %></p>
+                    </div>
+                    <div class="card_actions">
+                        <a href="/productos/<%= producto._id %>" class="btn">Detalles</a>
+                        <%- include ('../includes/agregar-al-carrito.ejs', {producto: producto}) %>
+                    </div>
+                </article>
+            <% } %>
+        </div>
+      <% } else { %>
+        <h1>No hay productos que mostrar!</h1>
+      <% } %>
+   </main>
+
+<%- include('../includes/pie.ejs') %>

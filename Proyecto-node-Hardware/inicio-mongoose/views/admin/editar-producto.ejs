@@ -1,0 +1,32 @@
+<%- include('../includes/encabezado.ejs') %>    
+    <link rel="stylesheet" href="/css/formas.css">
+    <link rel="stylesheet" href="/css/producto.css">
+</head>
+<body>
+  <%- include('../includes/navegacion.ejs') %>
+   <main>
+    <form class="forma-producto" action="/admin/<% if(edicion) { %>editar-producto<% } else { %>agregar-producto <% } %>" method="POST">
+        <div class="form-control">
+            <label for="titulo">Titulo</label>
+            <input type="text" name="titulo" id="titulo" value="<% if(edicion) { %><%= producto.titulo %><% } %>">                
+        </div>
+        <div class="form-control">
+            <label for="urlImagen">Url Imagen</label>
+            <input type="text" name="urlImagen" id="urlImagen" value="<% if(edicion) { %><%= producto.urlImagen %><% } %>">                
+        </div>
+        <div class="form-control">
+            <label for="precio">Precio</label>
+            <input type="number" name="precio" id="precio" step="0.01" value="<% if(edicion) { %><%= producto.precio %><% } %>">                
+        </div>
+        <div class="form-control">
+            <label for="descripcion">Descripcion</label>
+            <textarea name="descripcion" id="descripcion" rows="5"><% if(edicion) { %><%= producto.descripcion %><% } %></textarea>                
+        </div>
+        <% if(edicion) {%>
+            <input type="hidden" value="<%= producto._id %>" name="idProducto">
+        <% } %>
+        <button class="btn" type="submit"><% if(edicion) { %>Actualizar Producto <% } else { %> Agregar Producto <%  } %></button>          
+    </form>
+   </main>
+    
+<%- include('../includes/pie.ejs') %>
